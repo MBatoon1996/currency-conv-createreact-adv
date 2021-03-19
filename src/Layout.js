@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import{ FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +10,7 @@ const Layout = (props) => {
     return (
         <React.Fragment>
             <nav className="navbar navbar-light bg-light">
-                <span className="navbar-brand mb-0 h1">Marques' Currency Exchange Rates</span>
+                <Link to="/"><span className="navbar-brand mb-0 h1">Marques' Currency Exchange Rates</span></Link>
             </nav>
             <div className="container py-3">
                 {props.children}
@@ -32,8 +33,8 @@ const Layout = (props) => {
                     </div>
                 </div>
                 </div>
-        <p id="copyright" className="text-center">©2021 Marques Batoon</p>
-      </footer>
+                <p id="copyright" className="text-center">©2021 Marques Batoon</p>
+            </footer>
         </React.Fragment>
     );
 }
